@@ -8,12 +8,12 @@
 </template>
 
 <script>
-export default {
-  props: {
-    todo: {
-      type: Object,
-      required: true
+  export default {
+    props: {
+      todo: {
+        type: Object,
+        required: true
+      }
     }
   }
-}
 </script>
