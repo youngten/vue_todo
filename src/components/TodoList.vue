@@ -5,14 +5,14 @@
       placeholder="New todo"
       @keydown.enter="addTodo"
     />
-    <ul v-if="todos.length">
+    <ol v-if="todos.length">
       <TodoListItem
         v-for="todo in sorted_todos"
         :key="todo.id"
         :todo="todo"
         @remove="removeTodo"
       />
-    </ul>
+    </ol>
     <p v-else>
       Nothing left in the list. Add a new todo in the input above.
     </p>
@@ -35,7 +35,7 @@
         todos: [
           {
             id: nextTodoId++,
-            text: 'Learn Vue'
+            text: 'Fall in love'
           },
           {
             id: nextTodoId++,
@@ -43,7 +43,7 @@
           },
           {
             id: nextTodoId++,
-            text: 'Fall in love'
+            text: 'Learn Vue'
           }
         ]
       }
@@ -56,7 +56,7 @@
             id: nextTodoId++,
             text: trimmedText
           })
-          // this.newTodoText = ''
+          this.newTodoText = ''
         }
       },
       removeTodo(idToRemove) {
